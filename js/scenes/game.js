@@ -157,58 +157,60 @@ class GameScene extends Phaser.Scene {
         this.nom = sessionStorage.getItem("username");
 
         {//mapa
-            this.add.image(-2100, -4700, "vorera").setTint(0x636869);
-            this.add.image(300, -4700, "vorera").setTint(0x636869);
-            this.add.image(2700, -4700, "vorera").setTint(0x636869);
-            this.add.image(-2100, -2300, "vorera").setTint(0x636869);
-            this.add.image(300, -2300, "vorera").setTint(0x636869);
-            this.add.image(2700, -2300, "vorera").setTint(0x636869);
-            this.add.image(-2100, 100, "vorera").setTint(0x636869);
-            this.add.image(300, 100, "vorera").setTint(0x636869);
-            this.add.image(2700, 100, "vorera").setTint(0x636869);
-            this.add.image(-2100, 2500, "vorera").setTint(0x636869);
-            this.add.image(300, 2500, "vorera").setTint(0x636869);
-            this.add.image(2700, 2500, "vorera").setTint(0x636869);
+            this.mapGroup = this.add.group();
+
+            this.mapGroup.create(-2100, -4700, "vorera").setTint(0x636869);
+            this.mapGroup.create(300, -4700, "vorera").setTint(0x636869);
+            this.mapGroup.create(2700, -4700, "vorera").setTint(0x636869);
+            this.mapGroup.create(-2100, -2300, "vorera").setTint(0x636869);
+            this.mapGroup.create(300, -2300, "vorera").setTint(0x636869);
+            this.mapGroup.create(2700, -2300, "vorera").setTint(0x636869);
+            this.mapGroup.create(-2100, 100, "vorera").setTint(0x636869);
+            this.mapGroup.create(300, 100, "vorera").setTint(0x636869);
+            this.mapGroup.create(2700, 100, "vorera").setTint(0x636869);
+            this.mapGroup.create(-2100, 2500, "vorera").setTint(0x636869);
+            this.mapGroup.create(300, 2500, "vorera").setTint(0x636869);
+            this.mapGroup.create(2700, 2500, "vorera").setTint(0x636869);
 
 
-            this.add.image(600, 0, "carretera1").setTint(0x888e94);
-            this.add.image(600, -1680, "carretera1").setTint(0x888e94);
-            this.add.image(-240, -840, "carretera2").setTint(0x888e94);
-            this.add.image(1200, 0, "carretera1").setTint(0x888e94);
-            this.add.image(-1200, 0, "carretera1").setTint(0x888e94);
-            this.add.image(-1200, 1280, "carretera1").setTint(0x888e94);
-            this.add.image(1200, -1680, "carretera1").setTint(0x888e94);
-            this.add.image(1200, -2940, "carretera1").setTint(0x888e94);
-            this.add.image(-1200, -1680, "carretera1").setTint(0x888e94);
-            this.add.image(-1200, -3480, "carretera1").setTint(0x888e94);
-            this.add.image(1200, -4200, "carretera1").setTint(0x888e94);
-            this.add.image(-400, 2180, "carretera2").setTint(0x888e94);
-            this.add.image(880, 2180, "carretera2").setTint(0x888e94);
-            this.add.image(1840, 2140, "carretera1").setTint(0x888e94);
-            this.add.image(600, -2940, "carretera1").setTint(0x888e94);
-            this.add.image(600, -4200, "carretera1").setTint(0x888e94);
-            this.add.image(-2000, -2640, "carretera2").setTint(0x888e94);
-            this.add.image(2040, -4632, "carretera2").setTint(0x888e94);
-            this.add.image(2940, -4200, "carretera1").setTint(0x888e94);
-            this.add.image(2040, -3400, "carretera2").setTint(0x888e94);
+            this.mapGroup.create(600, 0, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(600, -1680, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-240, -840, "carretera2").setTint(0x888e94);
+            this.mapGroup.create(1200, 0, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-1200, 0, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-1200, 1280, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(1200, -1680, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(1200, -2940, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-1200, -1680, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-1200, -3480, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(1200, -4200, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-400, 2180, "carretera2").setTint(0x888e94);
+            this.mapGroup.create(880, 2180, "carretera2").setTint(0x888e94);
+            this.mapGroup.create(1840, 2140, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(600, -2940, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(600, -4200, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(-2000, -2640, "carretera2").setTint(0x888e94);
+            this.mapGroup.create(2040, -4632, "carretera2").setTint(0x888e94);
+            this.mapGroup.create(2940, -4200, "carretera1").setTint(0x888e94);
+            this.mapGroup.create(2040, -3400, "carretera2").setTint(0x888e94);
 
 
-            this.add.image(600, -840, "interseccio").setTint(0x888e94);
-            this.add.image(1200, -840, "interseccio").setTint(0x888e94);
-            this.add.image(-1200, -840, "interseccio").setTint(0x888e94);
-            this.add.image(-1000, -840, "interseccio").setTint(0x888e94);
-            this.add.image(-1200, 2180, "interseccio").setTint(0x888e94);
-            this.add.image(-1200, 2120, "interseccio").setTint(0x888e94);
-            this.add.image(1720, 2180, "interseccio").setTint(0x888e94);
-            this.add.image(1840, 2180, "interseccio").setTint(0x888e94);
-            this.add.image(1840, 2980, "interseccio").setTint(0x888e94);
-            this.add.image(-1200, -2640, "interseccio").setTint(0x888e94);
-            this.add.image(-1200, -2440, "interseccio").setTint(0x888e94);
-            this.add.image(1200, -4600, "interseccio").setTint(0x888e94);
-            this.add.image(2880, -4632, "interseccio").setTint(0x888e94);
-            this.add.image(2940, -3400, "interseccio").setTint(0x888e94);
-            this.add.image(2840, -3400, "interseccio").setTint(0x888e94);
-            this.add.image(1200, -3400, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(600, -840, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(1200, -840, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(-1200, -840, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(-1000, -840, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(-1200, 2180, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(-1200, 2120, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(1720, 2180, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(1840, 2180, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(1840, 2980, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(-1200, -2640, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(-1200, -2440, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(1200, -4600, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(2880, -4632, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(2940, -3400, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(2840, -3400, "interseccio").setTint(0x888e94);
+            this.mapGroup.create(1200, -3400, "interseccio").setTint(0x888e94);
 
 
             this.edificis = this.physics.add.staticGroup();
@@ -349,6 +351,7 @@ class GameScene extends Phaser.Scene {
         this.player.onCollide = true;
         this.player.setBounce(0);
 
+        this.cameras.main.setZoom(0.75);
         this.cameras.main.startFollow(this.player);
 
         this.enemics = this.physics.add.group();
@@ -404,6 +407,11 @@ class GameScene extends Phaser.Scene {
             this.player.setAcceleration(0, 0);
             this.tocant_cotxe_pers(cotxe);
         });
+
+        // Pre-calculate static bounds for faster spawn checks
+        this.staticBounds = [];
+        this.edificis.getChildren().forEach(e => this.staticBounds.push(e.getBounds()));
+        this.cotxes.getChildren().forEach(c => this.staticBounds.push(c.getBounds()));
 
         this.bales_aliades = this.physics.add.group();
         this.bales_enemigues = this.physics.add.group();
@@ -617,144 +625,11 @@ class GameScene extends Phaser.Scene {
             loop: true
         });
 
-        // --- VISUAL HUD SETUP ---
-
-        // 1. Generate Heart Textures programmatically (Pixel Art Style)
-        const heartGraphics = this.make.graphics({ x: 0, y: 0, add: false });
-
-        // Pixel Art Heart Design (11x10 grid, scaled up)
-        const pixelSize = 3;
-        const heartShape = [
-            "01100110",
-            "11111111",
-            "11111111",
-            "11111111",
-            "01111110",
-            "00111100",
-            "00011000"
-        ];
-
-        // Draw Full Heart
-        heartGraphics.fillStyle(0xeb631b, 1); // Molotov Orange
-        for (let y = 0; y < heartShape.length; y++) {
-            for (let x = 0; x < heartShape[y].length; x++) {
-                if (heartShape[y][x] === '1') {
-                    heartGraphics.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
-                }
-            }
-        }
-        // Add a subtle highlight
-        heartGraphics.fillStyle(0xffffff, 0.4);
-        heartGraphics.fillRect(1 * pixelSize, 1 * pixelSize, pixelSize, pixelSize);
-        heartGraphics.fillRect(5 * pixelSize, 1 * pixelSize, pixelSize, pixelSize);
-
-        heartGraphics.generateTexture('heart_full', 8 * pixelSize, 7 * pixelSize);
-
-        heartGraphics.clear();
-
-        // Draw Empty Heart (Outline)
-        // Background
-        heartGraphics.fillStyle(0x0d1117, 0.5); // Dark transparent bg
-        for (let y = 0; y < heartShape.length; y++) {
-            for (let x = 0; x < heartShape[y].length; x++) {
-                if (heartShape[y][x] === '1') {
-                    heartGraphics.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
-                }
-            }
-        }
-
-        // Outline
-        heartGraphics.fillStyle(0xeb631b, 1);
-        for (let y = 0; y < heartShape.length; y++) {
-            for (let x = 0; x < heartShape[y].length; x++) {
-                if (heartShape[y][x] === '1') {
-                    // Check if it's an edge pixel
-                    let isEdge = false;
-                    if (y == 0 || y == heartShape.length - 1 || x == 0 || x == heartShape[y].length - 1) isEdge = true;
-                    else if (heartShape[y - 1] && heartShape[y - 1][x] == '0') isEdge = true;
-                    else if (heartShape[y + 1] && heartShape[y + 1][x] == '0') isEdge = true;
-                    else if (heartShape[y][x - 1] == '0' || heartShape[y][x + 1] == '0') isEdge = true;
-
-                    if (isEdge) heartGraphics.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
-                }
-            }
-        }
-        heartGraphics.generateTexture('heart_empty', 8 * pixelSize, 7 * pixelSize);
-
-
-        // 2. Time & Score (Top Left)
-        this.text_temps = this.add.text(40, 30, "00:00", {
-            fontFamily: '"Share Tech Mono", monospace', fontSize: '45px', fill: '#ffffff'
-        }).setScrollFactor(0).setShadow(2, 2, 'rgba(0,0,0,0.8)', 2);
-
-        this.text_punts = this.add.text(40, 80, "SCORE: " + this.punts, {
-            fontFamily: '"Share Tech Mono", monospace', fontSize: '35px', fill: '#eb631b'
-        }).setScrollFactor(0).setShadow(2, 2, 'rgba(0,0,0,0.8)', 2);
-
-
-        // 3. Health Hearts (Top Right)
-        this.hearts = [];
-        const maxHearts = 6; // Initial max health
-        const startX = 1750; // Right side
-        for (let i = 0; i < maxHearts; i++) {
-            // Create hearts from right to left
-            let heart = this.add.image(startX - (i * 40), 50, 'heart_full').setScrollFactor(0).setScale(1.2);
-            this.hearts.push(heart);
-        }
-
-        // 4. Weapon Info (Bottom Left)
-        // Background for weapon area
-        this.weaponBg = this.add.rectangle(220, 780, 400, 100, 0x0d1117, 0.9)
-            .setScrollFactor(0).setStrokeStyle(2, 0x30363d);
-
-        this.weaponIcon = this.add.image(90, 780, this.player.arma.nom)
-            .setScrollFactor(0).setScale(2.5);
-
-        // Ammo Label
-        this.add.text(160, 740, "AMMO", {
-            fontFamily: '"Share Tech Mono", monospace', fontSize: '20px', fill: '#eb631b' // Cyan for Ammo
-        }).setScrollFactor(0).setShadow(1, 1, 'rgba(0,0,0,0.8)', 1);
-
-        // Ammo Bar Background (Clip Capacity)
-        const ammoBarWidth = 200;
-        const ammoBarHeight = 15;
-        this.ammoBarBg = this.add.rectangle(160, 775, ammoBarWidth, ammoBarHeight, 0x0d1117)
-            .setScrollFactor(0).setOrigin(0, 0.5).setStrokeStyle(1, 0xeb631b);
-
-        // Ammo Bar Fill (Current Clip)
-        this.ammoBarFill = this.add.rectangle(160, 775, ammoBarWidth, ammoBarHeight, 0xeb631b)
-            .setScrollFactor(0).setOrigin(0, 0.5);
-
-        // Total Reserve Text
-        this.text_municio_reserva = this.add.text(160, 795, "", {
-            fontFamily: '"Share Tech Mono", monospace', fontSize: '22px', fill: '#8b949e'
-        }).setScrollFactor(0).setShadow(1, 1, 'rgba(0,0,0,0.8)', 1);
-
-
-        // 5. Fuel Bar (Bottom Right)
-        // Fuel Icon/Label
-        this.add.text(1420, 780, "FUEL", {
-            fontFamily: '"Share Tech Mono", monospace', fontSize: '28px', fill: '#eb631b'
-        }).setScrollFactor(0).setOrigin(0.5);
-
-        // Bar container
-        const barWidth = 300;
-        const barHeight = 25;
-        const barX = 1620; // Center x of bar
-        const barY = 780;
-
-        // Background with border
-        this.fuelBarBg = this.add.rectangle(barX, barY, barWidth + 6, barHeight + 6, 0x0d1117)
-            .setScrollFactor(0).setStrokeStyle(3, 0x30363d);
-
-        // Fill (Anchor to left)
-        this.fuelBarFill = this.add.rectangle(barX - (barWidth / 2), barY, 0, barHeight, 0xeb631b)
-            .setScrollFactor(0).setOrigin(0, 0.5);
-
-        // Value text
-        this.text_benzina = this.add.text(1800, 780, "0%", {
-            fontFamily: '"Share Tech Mono", monospace', fontSize: '24px', fill: '#fff'
-        }).setScrollFactor(0).setOrigin(0, 0.5);
+        // --- VISUAL HUD (Moved to UIScene) ---
+        // Launch UI Scene
+        // Launch UI Scene
+        this.scene.launch('UIScene', { gameScene: this });
+        this.scene.bringToTop('UIScene');
 
 
 
@@ -875,72 +750,7 @@ class GameScene extends Phaser.Scene {
         }
     }
 
-    actualitzar_hud() {
-        // Time
-        let mins = Math.floor(this.temps / 60);
-        let secs = this.temps % 60;
-        if (secs < 10) secs = "0" + secs;
-        if (mins < 10) mins = "0" + mins;
-        this.text_temps.setText("TIME " + mins + ":" + secs);
 
-        // Score
-        this.text_punts.setText("SCORE " + this.punts);
-
-        // Health (Hearts)
-        // Assuming max health is 6. If playing with variable health, this logic needs adaptation.
-        // We render hearts from RIGHT to LEFT in the array construction (index 0 is rightmost),
-        // but typically health is read Left to Right.
-        // My previous creation loop: startX - (i * 40). i=0 is rightmost. 
-        // Let's visualize: 
-        // [H5] [H4] [H3] [H2] [H1] [H0] (Screen position: Left -> Right)
-        // Wait, my loop: x = 1750 - (i*40).
-        // i=0: x=1750 (Far right)
-        // i=5: x=1550 (Left)
-        // So hearts are [H5, ..., H0].
-        // To fill them logically, if we have 3 HP, we want the LEFTMOST 3 to be full?
-        // Or usually Left-aligned?
-        // If HUD is on top-right, usually the rightmost is the "last" one?
-        // Let's just say: HP=3. We want 3 hearts full.
-        // The array `this.hearts` has 6 images.
-        // I will just iterate and set texture based on index.
-        for (let i = 0; i < this.hearts.length; i++) {
-            // If we want [FULL] [FULL] [FULL] [EMPTY] [EMPTY] [EMPTY] (Left to Right)
-            // In my array, index 5 is leftmost (1550), index 0 is rightmost (1750).
-            // So we want indices 5, 4, 3 to be FULL. 2, 1, 0 to be EMPTY.
-            // This corresponds to: if (i >= (6 - hp)) -> FULL.
-            // Let's verify: HP=3. 6-3=3. Indices 3,4,5 (left ones) are Full. Correct.
-            if (i >= (this.hearts.length - this.player.vida)) {
-                this.hearts[i].setTexture('heart_full');
-            } else {
-                this.hearts[i].setTexture('heart_empty');
-            }
-        }
-
-        // Weapon
-        // Update icon only if changed to avoid heavy texture swapping (though Phaser handles this well)
-        if (this.weaponIcon.texture.key !== this.player.arma.nom) {
-            this.weaponIcon.setTexture(this.player.arma.nom);
-        }
-        this.text_municio.setText(this.player.arma.bales + " / " + this.player.arma.municio);
-
-        // Fuel Bar
-        const fuelPercent = Phaser.Math.Clamp(this.player.ampolla / this.player.ampolla_max, 0, 1);
-        this.fuelBarFill.width = 300 * fuelPercent;
-        this.text_benzina.setText(Math.floor(fuelPercent * 100) + "%");
-    }
-
-    actualitzar_temps() {
-        if (this.estat != "pause") {
-            this.temps--;
-            if (Math.floor(this.temps / 60) == 0) {
-                this.dificultat += 1;
-                this.n_enemics_maxim += 20;
-            }
-            if (this.temps <= 0) {
-                this.acabar_partida();
-            }
-        }
-    }
 
     // acabar_partida moved to be near menu_pausa for better organization
 
@@ -979,50 +789,113 @@ class GameScene extends Phaser.Scene {
     }
 
     recollir_loot(loot) {
-        if (loot.tipus == "municio") this.player.arma.municio += this.player.arma.mida_cartutxo;
-        else {
-            if (loot.tipus == "pistola") {
-                if (this.player.arma.nom != "pistola") {
-                    this.player.anims.play("caminar_pistola");
-                    this.player.arma = this.pistola;
-                    this.player.arma.bales = this.player.arma.mida_cartutxo;
-                    this.player.arma.municio = this.player.arma.mida_cartutxo * 2;
+        if (!loot || !loot.active) return;
+
+        if (loot.tipus == "municio") {
+            this.player.arma.municio += this.player.arma.mida_cartutxo * 2;
+        }
+        else if (loot.tipus == "pistola") {
+            this.player.arma = this.pistola;
+            this.player.arma.municio += this.player.arma.mida_cartutxo;
+        }
+        else if (loot.tipus == "escopeta") {
+            this.player.arma = this.escopeta;
+            this.player.arma.municio += this.player.arma.mida_cartutxo;
+        }
+        else if (loot.tipus == "rifle") {
+            this.player.arma = this.rifle;
+            this.player.arma.municio += this.player.arma.mida_cartutxo;
+        }
+        loot.destroy();
+    }
+
+    clearCarUI(car) {
+        if (car.ui_group) {
+            car.ui_group.destroy(true); // destroy children too
+            car.ui_group = null;
+        }
+    }
+
+    updateCarUI(car, isPersonal) {
+        if (!car.ui_group) {
+            car.ui_group = this.add.group();
+        }
+
+        // Position relative to car
+        const x = car.body.position.x + car.body.width / 2;
+        const y = car.body.position.y - 60; // Higher up
+
+        // Clear previous frame elements
+        car.ui_group.clear(true, true);
+
+        // Styles
+        const textStyle = { fontFamily: '"Share Tech Mono", monospace', fontSize: '35px', fill: '#ffffff', stroke: '#000000', strokeThickness: 4 };
+        const hintStyle = { fontFamily: '"Share Tech Mono", monospace', fontSize: '28px', fill: '#eb631b', stroke: '#000000', strokeThickness: 4 };
+
+        // 1. Interaction Progress (Sampling/Refueling)
+        if (this.player.omplint_benzina) {
+            // Progress Bar
+            const barW = 200;
+            const barH = 25;
+            const progress = this.player.temps_omplir / this.player.temps_omplir_max;
+
+            // Text: Action Name
+            const actionText = isPersonal ? "REFUELING..." : "SIPHONING...";
+            const txt = this.add.text(x, y - 35, actionText, hintStyle).setOrigin(0.5).setDepth(200);
+            car.ui_group.add(txt);
+
+            // Bar Background
+            const bg = this.add.rectangle(x, y, barW + 6, barH + 6, 0x000000).setStrokeStyle(2, 0xffffff).setDepth(200);
+            car.ui_group.add(bg);
+
+            // Bar Fill
+            const color = isPersonal ? 0x00ff00 : 0xeb631b;
+            const fill = this.add.rectangle(x - barW / 2, y, barW * progress, barH, color).setOrigin(0, 0.5).setDepth(200);
+            car.ui_group.add(fill);
+
+        } else {
+            // 2. Idle State - Show Info & Hint
+            let infoText = "";
+            let hintText = "";
+            let infoColor = '#ffffff';
+
+            if (isPersonal) {
+                infoText = `${car.litres}/${car.diposit} L`;
+                if (this.player.ampolla > 0 && car.litres < car.diposit) {
+                    hintText = "[E] REFUEL";
+                }
+            } else {
+                infoText = `${car.benzina} L`;
+                if (car.benzina > 0 && this.player.ampolla < this.player.ampolla_max) {
+                    hintText = "[E] SIPHON";
+                } else if (car.benzina <= 0) {
+                    infoText = "EMPTY";
+                    infoColor = '#888888';
+                } else if (this.player.ampolla >= this.player.ampolla_max) {
+                    hintText = "FULL BOTTLE";
+                    hintStyle.fill = '#ff0000';
                 }
             }
-            else if (loot.tipus == "escopeta") {
-                if (this.player.arma.nom != "escopeta") {
-                    this.player.anims.play("caminar_escopeta");
-                    this.player.arma = this.escopeta;
-                    this.player.arma.bales = this.player.arma.mida_cartutxo;
-                    this.player.arma.municio = this.player.arma.mida_cartutxo * 2;
-                }
-            }
-            else {
-                if (this.player.arma.nom != "rifle") {
-                    this.player.anims.play("caminar_rifle");
-                    this.player.arma = this.rifle;
-                    this.player.arma.bales = this.player.arma.mida_cartutxo;
-                    this.player.arma.municio = this.player.arma.mida_cartutxo * 2;
-                }
+
+            textStyle.fill = infoColor;
+            const txtInfo = this.add.text(x, y - 15, infoText, textStyle).setOrigin(0.5).setDepth(200);
+            car.ui_group.add(txtInfo);
+
+            if (hintText) {
+                const txtHint = this.add.text(x, y + 25, hintText, hintStyle).setOrigin(0.5).setDepth(200);
+                car.ui_group.add(txtHint);
             }
         }
-        loot.destroy()
     }
 
     tocant_cotxe_pers(cotxe) {
         this.cotxe_actual = cotxe;
         this.colisio_cotxe = true;
-        if (!cotxe.text_afegit) {
-            cotxe.text_afegit = true;
-            cotxe.text = this.add.text(cotxe.body.position.x + 50, cotxe.body.position.y + 10, cotxe.litres + " L/" + cotxe.diposit + "L", { fontSize: '35px', fill: '#FFF' });
-        }
+
+        // Interaction Logic
         if (this.player.ampolla > 0 && cotxe.diposit > cotxe.litres && this.player.accio != "recarregar" && this.player.accio != "dash") {
             if (this.cursors.E.isDown) {
                 this.player.omplint_benzina = true;
-                if (cotxe.text) {
-                    cotxe.text.destroy();
-                    cotxe.text_afegit = false;
-                }
             }
             else {
                 this.player.omplint_benzina = false;
@@ -1030,8 +903,7 @@ class GameScene extends Phaser.Scene {
             }
             if (this.player.omplint_benzina) {
                 this.player.temps_omplir += 1;
-                if (cotxe.text) cotxe.text.destroy();
-                cotxe.text = this.add.text(cotxe.body.position.x + 50, cotxe.body.position.y + 10, ((this.player.temps_omplir_max - this.player.temps_omplir) / 60).toFixed(2) + " s", { fontSize: '35px', fill: '#FFF' });
+
                 if (this.player.temps_omplir >= this.player.temps_omplir_max) {
                     this.player.omplint_benzina = false;
                     this.player.temps_omplir = 0;
@@ -1046,6 +918,9 @@ class GameScene extends Phaser.Scene {
                 }
             }
         }
+
+        // Update UI
+        this.updateCarUI(cotxe, true);
     }
 
     omplir_cotxes() {
@@ -1059,17 +934,11 @@ class GameScene extends Phaser.Scene {
     tocant_cotxe(cotxe) {
         this.cotxe_actual = cotxe;
         this.colisio_cotxe = true;
-        if (!cotxe.text_afegit) {
-            cotxe.text_afegit = true;
-            cotxe.text = this.add.text(cotxe.body.position.x + 50, cotxe.body.position.y + 10, cotxe.benzina + " L", { fontSize: '35px', fill: '#FFF' });
-        }
+
+        // Interaction Logic
         if (cotxe.benzina > 0 && this.player.ampolla < this.player.ampolla_max && this.player.accio != "recarregar" && this.player.accio != "dash") {
             if (this.cursors.E.isDown) {
                 this.player.omplint_benzina = true;
-                if (cotxe.text) {
-                    cotxe.text.destroy();
-                    cotxe.text_afegit = false;
-                }
             }
             else {
                 this.player.omplint_benzina = false;
@@ -1077,8 +946,7 @@ class GameScene extends Phaser.Scene {
             }
             if (this.player.omplint_benzina) {
                 this.player.temps_omplir += 1;
-                if (cotxe.text) cotxe.text.destroy();
-                cotxe.text = this.add.text(cotxe.body.position.x + 50, cotxe.body.position.y + 10, ((this.player.temps_omplir_max - this.player.temps_omplir) / 60).toFixed(2) + " s", { fontSize: '35px', fill: '#FFF' });
+
                 if (this.player.temps_omplir >= this.player.temps_omplir_max) {
                     this.player.omplint_benzina = false;
                     this.player.temps_omplir = 0;
@@ -1096,6 +964,9 @@ class GameScene extends Phaser.Scene {
                 }
             }
         }
+
+        // Update UI
+        this.updateCarUI(cotxe, false);
     }
 
     tornar_mortal() {
@@ -1308,21 +1179,52 @@ class GameScene extends Phaser.Scene {
 
 
 
+    isValidSpawn(x, y) {
+        // 1. Distance from Player - Avoid spawning too close
+        if (!this.player) return false;
+        const dist = Phaser.Math.Distance.Between(x, y, this.player.x, this.player.y);
+        if (dist < 700) return false;
+
+        // 2. Camera Check - Use worldView to check visibility
+        const cam = this.cameras.main;
+        if (x >= cam.worldView.x && x <= cam.worldView.right &&
+            y >= cam.worldView.y && y <= cam.worldView.bottom) {
+            return false;
+        }
+
+        // 3. Static Bounds Check (Buildings + Cars) - Use pre-calculated rects
+        const collision = this.staticBounds.some(rect => rect.contains(x, y));
+        if (collision) return false;
+
+        return true;
+    }
+
     spawnear_enemics() {
+
         if (this.n_enemics < this.n_enemics_maxim) {
             var n = Phaser.Math.RND.integerInRange(0, 300);
             if (n < (this.dificultat * 2)) {
-                //se que no haurien de tenir la mateixa probabilitat a cada zona ja que n'hi ha de més petites, però per ara em serveix simplement donaré una més prob a la 5 i 4
-                var fet = false;
-                while (!fet) {
+                let punt = null;
+                let valid = false;
+                const maxAttempts = 15;
+
+                for (let attempt = 0; attempt < maxAttempts; attempt++) {
                     n = Phaser.Math.RND.integerInRange(0, 7);
                     if (n > 5) n = 5;
                     else if (n == 5) n = 4;
+
                     let zona = this.zones_spawn[n];
-                    var punt = zona.getRandomPoint();
-                    let cameraPersonatge = this.cameras.main.getBounds()
-                    if (!cameraPersonatge.contains(punt.x, punt.y)) fet = true;
+                    let tempPunt = zona.getRandomPoint();
+
+                    if (this.isValidSpawn(tempPunt.x, tempPunt.y)) {
+                        punt = tempPunt;
+                        valid = true;
+                        break;
+                    }
                 }
+
+                if (!valid) return; // Skip spawning this frame if no valid spot found
+
                 n = Phaser.Math.RND.integerInRange(0, 3);
                 var graphics;
                 if (n == 0) graphics = "enemic1";
@@ -1403,26 +1305,38 @@ class GameScene extends Phaser.Scene {
     }
 
     canviar_angle(enemic) {
-        if (enemic) {
-            if (enemic.tipus_moviment == "deambular") {
-                var direccio;
-                if (enemic.dir_general == "dreta") direccio = new Phaser.Math.Vector2(1, 0);
-                else if (enemic.dir_general == "esquerra") direccio = new Phaser.Math.Vector2(-1, 0);
-                else if (enemic.dir_general == "avall") direccio = new Phaser.Math.Vector2(0, -1);
-                else direccio = new Phaser.Math.Vector2(0, 1);
-                let angle = Phaser.Math.RND.frac() * 45;
-                var negatiu = Phaser.Math.RND.between(0, 1);
-                if (negatiu == 0) direccio.rotate((-angle / 180) * Math.PI);
-                else direccio.rotate((angle / 180) * Math.PI);
-                direccio.normalize();
-                enemic.direccio = direccio;
-                var rotacio = direccio.angle();
-                enemic.setRotation(rotacio);
-                enemic.setVelocity(enemic.direccio.x * enemic.velocitat, enemic.direccio.y * enemic.velocitat);
-                enemic.event_angle = new Phaser.Time.TimerEvent({ delay: 2000, callback: this.canviar_angle, args: [enemic], callbackScope: this });
-                this.time.addEvent(enemic.event_angle);
-            }
+        if (!enemic || !enemic.active) return;
 
+        // STOP existing timer to prevent exponential growth!
+        if (enemic.event_angle) {
+            enemic.event_angle.remove();
+        }
+
+        if (enemic.tipus_moviment == "deambular") {
+            var direccio;
+            if (enemic.dir_general == "dreta") direccio = new Phaser.Math.Vector2(1, 0);
+            else if (enemic.dir_general == "esquerra") direccio = new Phaser.Math.Vector2(-1, 0);
+            else if (enemic.dir_general == "avall") direccio = new Phaser.Math.Vector2(0, -1);
+            else direccio = new Phaser.Math.Vector2(0, 1);
+
+            let angle = Phaser.Math.RND.frac() * 45;
+            var negatiu = Phaser.Math.RND.between(0, 1);
+            if (negatiu == 0) direccio.rotate((-angle / 180) * Math.PI);
+            else direccio.rotate((angle / 180) * Math.PI);
+            direccio.normalize();
+
+            enemic.direccio = direccio;
+            var rotacio = direccio.angle();
+            enemic.setRotation(rotacio);
+            enemic.setVelocity(enemic.direccio.x * enemic.velocitat, enemic.direccio.y * enemic.velocitat);
+
+            // Create next timer
+            enemic.event_angle = this.time.addEvent({
+                delay: 2000,
+                callback: this.canviar_angle,
+                args: [enemic],
+                callbackScope: this
+            });
         }
     }
 
@@ -1448,7 +1362,7 @@ class GameScene extends Phaser.Scene {
             enemic.cooldown = true;
             var timedEvent = new Phaser.Time.TimerEvent({ delay: enemic.cadencia, args: [enemic], callback: this.cooldown_enemic_reset, callbackScope: this });
             this.time.addEvent(timedEvent);
-            this.afegir_bala(pos_pistola, direccio_final, 600, 1000, "enemiga", "normal", enemic.dany, "bala_enemiga_pistola");
+            this.afegir_bala(pos_pistola, direccio_final, 400, 1000, "enemiga", "normal", enemic.dany, "bala_enemiga_pistola");
         }
         else if (enemic.tipus == "escopeta") {
             enemic.cooldown = true;
@@ -1461,7 +1375,7 @@ class GameScene extends Phaser.Scene {
                 if (negatiu == 0) direccio_final.rotate((-angle / 180) * Math.PI);
                 else direccio_final.rotate((angle / 180) * Math.PI);
                 direccio_final.normalize();
-                let vel = Phaser.Math.RND.integerInRange(600, 800);
+                let vel = Phaser.Math.RND.integerInRange(400, 600);
                 this.afegir_bala(pos_pistola, direccio_final, vel, 1000, "enemiga", "normal", enemic.dany, "bala_enemiga_pistola");
             }
 
@@ -1476,7 +1390,7 @@ class GameScene extends Phaser.Scene {
             enemic.cooldown = true;
             var timedEvent = new Phaser.Time.TimerEvent({ delay: enemic.cadencia, args: [enemic], callback: this.cooldown_enemic_reset, callbackScope: this });
             this.time.addEvent(timedEvent);
-            this.afegir_bala(pos_pistola, direccio_final, 1500, 1500, "enemiga", "normal", enemic.dany, "bala_enemiga_rifle");
+            this.afegir_bala(pos_pistola, direccio_final, 1000, 1500, "enemiga", "normal", enemic.dany, "bala_enemiga_rifle");
         }
     }
 
@@ -1630,203 +1544,17 @@ class GameScene extends Phaser.Scene {
         localStorage.partides = JSON.stringify(arrayPartides);
     }
 
-    createMenuButton(x, y, text, callback) {
-        const button = this.add.container(x, y);
-
-        // Background (transparent with border)
-        const bg = this.add.rectangle(0, 0, 300, 60, 0x000000, 0); // Transparent fill
-        const border = this.add.graphics();
-
-        // Text
-        const textObj = this.add.text(0, 0, text, {
-            fontFamily: '"Share Tech Mono", "Courier New", monospace',
-            fontSize: '28px',
-            color: '#8b949e'
-        }).setOrigin(0.5);
-
-        button.add([bg, border, textObj]);
-        button.setSize(300, 60);
-        button.setInteractive({ useHandCursor: true });
-
-        // Draw initial border
-        const drawBorder = (color, thickness) => {
-            border.clear();
-            border.lineStyle(thickness, color);
-            border.strokeRect(-150, -30, 300, 60); // Centered relative to container
-        };
-        drawBorder(0x30363d, 2);
-
-        // Hover effects
-        button.on('pointerover', () => {
-            drawBorder(0xeb631b, 2); // Molotov Orange
-            textObj.setColor('#ffffff');
-            textObj.setShadow(0, 0, 15, 'rgba(235, 99, 27, 0.5)', 2);
-            // Optional: Background glow
-            border.fillStyle(0xeb631b, 0.1);
-            border.fillRect(-150, -30, 300, 60);
-        });
-
-        button.on('pointerout', () => {
-            drawBorder(0x30363d, 2);
-            textObj.setColor('#8b949e');
-            textObj.setShadow(0, 0, 0, '#000', 0);
-            border.clear(); // Clear fill
-            drawBorder(0x30363d, 2); // Redraw border
-        });
-
-        button.on('pointerup', callback);
-
-        return button;
-    }
-
     acabar_partida() {
         this.estat = "pause";
         this.physics.pause();
-
-        // Screen center coordinates (since we use setScrollFactor(0))
-        const screenCenterX = this.cameras.main.width / 2;
-        const screenCenterY = this.cameras.main.height / 2;
-
-        // Darken background
-        const overlay = this.add.rectangle(
-            screenCenterX,
-            screenCenterY,
-            1800, 850, 0x0d1117, 0.9
-        ).setScrollFactor(0); // Ensure it stays on screen
-
-        var missatge = this.add.text(screenCenterX, screenCenterY - 150, "GAME OVER", {
-            fontFamily: '"Share Tech Mono", monospace',
-            fontSize: '80px',
-            fill: '#FFF',
-            shadow: { offsetX: 0, offsetY: 0, color: '#eb631b', blur: 20, stroke: true, fill: true }
-        }).setOrigin(0.5).setScrollFactor(0);
-
-        var scoreText = this.add.text(screenCenterX, screenCenterY - 50, "Fuel Collected: " + this.cotxe_personal.litres + " L", {
-            fontFamily: '"Share Tech Mono", monospace',
-            fontSize: '40px',
-            fill: '#e6edf3'
-        }).setOrigin(0.5).setScrollFactor(0);
-
-        const btnExit = this.createMenuButton(screenCenterX, screenCenterY + 100, "EXIT TO MENU", () => {
-            sessionStorage.clear()
-            window.location.assign("../index.html");
-        }).setScrollFactor(0);
-    }
-
-    acabar_partida() {
-        this.estat = "pause";
-        this.physics.pause();
-
-        // Screen center coordinates (since we use setScrollFactor(0))
-        const screenCenterX = this.cameras.main.width / 2;
-        const screenCenterY = this.cameras.main.height / 2;
-
-        // Darken background
-        const overlay = this.add.rectangle(
-            screenCenterX,
-            screenCenterY,
-            1800, 850, 0x0d1117, 0.9
-        ).setScrollFactor(0); // Ensure it stays on screen
-
-        var missatge = this.add.text(screenCenterX, screenCenterY - 150, "GAME OVER", {
-            fontFamily: '"Share Tech Mono", monospace',
-            fontSize: '80px',
-            fill: '#FFF',
-            shadow: { offsetX: 0, offsetY: 0, color: '#eb631b', blur: 20, stroke: true, fill: true }
-        }).setOrigin(0.5).setScrollFactor(0);
-
-        var scoreText = this.add.text(screenCenterX, screenCenterY - 50, "Fuel Collected: " + this.cotxe_personal.litres + " L", {
-            fontFamily: '"Share Tech Mono", monospace',
-            fontSize: '40px',
-            fill: '#e6edf3'
-        }).setOrigin(0.5).setScrollFactor(0);
-
-        const btnExit = this.createMenuButton(screenCenterX, screenCenterY + 100, "EXIT TO MENU", () => {
-            sessionStorage.clear()
-            window.location.assign("../index.html");
-        }).setScrollFactor(0);
+        this.scene.get('UIScene').showGameOverMenu(this.cotxe_personal.litres);
     }
 
     menu_pausa() {
-        // Screen center coordinates (since we use setScrollFactor(0))
-        const screenCenterX = this.cameras.main.width / 2;
-        const screenCenterY = this.cameras.main.height / 2;
-
-        // Darken background
-        const overlay = this.add.rectangle(
-            screenCenterX,
-            screenCenterY,
-            1800, 850, 0x0d1117, 0.8
-        ).setScrollFactor(0);
-
-        const title = this.add.text(screenCenterX, screenCenterY - 150, "PAUSE", {
-            fontFamily: '"Share Tech Mono", monospace',
-            fontSize: '60px',
-            fill: '#ffffff',
-            shadow: { offsetX: 0, offsetY: 0, color: '#eb631b', blur: 10, stroke: true, fill: true }
-        }).setOrigin(0.5).setScrollFactor(0);
-
-        const btnResume = this.createMenuButton(screenCenterX, screenCenterY - 20, "RESUME", () => {
-            this.estat = "jugant";
-            this.physics.resume();
-            overlay.destroy();
-            title.destroy();
-            btnResume.destroy();
-            btnSave.destroy();
-            btnExit.destroy();
-        }).setScrollFactor(0);
-
-        const btnSave = this.createMenuButton(screenCenterX, screenCenterY + 60, "SAVE GAME", () => {
-            this.save();
-            sessionStorage.clear()
-            window.location.assign("../index.html");
-        }).setScrollFactor(0);
-
-        const btnExit = this.createMenuButton(screenCenterX, screenCenterY + 140, "EXIT", () => {
-            sessionStorage.clear()
-            window.location.assign("../index.html");
-        }).setScrollFactor(0);
+        this.scene.get('UIScene').showPauseMenu();
     }
 
-    actualitzar_hud() {
-        // Time
-        let mins = Math.floor(this.temps / 60);
-        let secs = this.temps % 60;
-        if (secs < 10) secs = "0" + secs;
-        if (mins < 10) mins = "0" + mins;
-        this.text_temps.setText("TIME " + mins + ":" + secs);
 
-        // Score
-        this.text_punts.setText("SCORE " + this.punts);
-
-        // Health (Hearts)
-        for (let i = 0; i < this.hearts.length; i++) {
-            if (i >= (this.hearts.length - this.player.vida)) {
-                this.hearts[i].setTexture('heart_full');
-            } else {
-                this.hearts[i].setTexture('heart_empty');
-            }
-        }
-
-        // Weapon Icon
-        if (this.weaponIcon.texture.key !== this.player.arma.nom) {
-            this.weaponIcon.setTexture(this.player.arma.nom);
-        }
-
-        // Ammo Bar (Clip)
-        const clip = this.player.arma.bales;
-        const maxClip = this.player.arma.mida_cartutxo;
-        const clipPercent = Phaser.Math.Clamp(clip / maxClip, 0, 1);
-        this.ammoBarFill.width = 200 * clipPercent;
-
-        // Reserve Ammo Text
-        this.text_municio_reserva.setText("TOTAL: " + this.player.arma.municio);
-
-        // Fuel Bar
-        const fuelPercent = Phaser.Math.Clamp(this.player.ampolla / this.player.ampolla_max, 0, 1);
-        this.fuelBarFill.width = 300 * fuelPercent;
-        this.text_benzina.setText(Math.floor(fuelPercent * 100) + "%");
-    }
 
     update() {
 
@@ -1838,17 +1566,14 @@ class GameScene extends Phaser.Scene {
             this.menu_pausa();
         }
         if (this.estat == "jugant") {
-            this.actualitzar_hud();
+
 
 
             this.tractar_enemics();
 
             if (!this.colisio_cotxe) {
                 if (this.cotxe_actual) {
-                    if (this.cotxe_actual.text) {
-                        this.cotxe_actual.text.destroy();
-                        this.cotxe_actual.text_afegit = false;
-                    }
+                    this.clearCarUI(this.cotxe_actual);
                 }
                 if (this.player.omplint_benzina) this.player.omplint_benzina = false;
             }
